@@ -12,6 +12,11 @@
         <td><%= image_tag user.get_profile_image, size: '50x50' %></td>
         <td><%= user.name %></td>
         <td><%= link_to 'Show', user %></td>
+        <!-- フォロー機能 -->
+        <td>フォロー<%= user.followings.count %></td>
+        <td>フォロワー<%= user.followers.count %></td>
+        <!-- フォローボタンのrender -->
+        <td><%= render partial: "relationships/follow_btn", locals: { user: current_user } %></td>
       </tr>
     <% end %>
   </tbody>
