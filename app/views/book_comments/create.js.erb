@@ -1,3 +1,4 @@
+<!--コメントの非同期化-->
 $("#comment-textarea").val("")
 $("#book_comments_counter_<%= comment.book.id %>).html("<%= j(render 'book_comments/counter', book: comment.book) %>")
 $("#book_comments_index_<%= comment.book.id %>).html("<%= j(render 'book_comments/index', book: comment.book) %>")
